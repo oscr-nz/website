@@ -1,323 +1,322 @@
-<!doctype html>
-<html lang="en-NZ">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OSCR - Job management for small NZ businesses</title>
-<meta name="description" content="OSCR keeps your jobs, customers, photos and stock in one place, shaped to the kind of business you run. Made in New Zealand. One price per business, unlimited staff.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta property="og:title" content="OSCR - Job management for small NZ businesses">
-<meta property="og:description" content="Jobs, customers, photos and stock in one place, shaped to your kind of business. One price per business, unlimited staff.">
-<meta property="og:url" content="https://oscr.nz/">
-<meta property="og:type" content="website">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSCR - Jobs, the counter and stock for small businesses</title>
+<meta name="description" content="OSCR runs the workshop, the counter and the stock room in one system: jobs, customers, the till, gift cards, accounts, stock and supplier orders. Built alongside a working New Zealand bike shop.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 96'%3E%3Cellipse cx='20' cy='25' rx='15' ry='22' transform='rotate(-28 20 25)' fill='%23D4A24C'/%3E%3Cellipse cx='80' cy='25' rx='15' ry='22' transform='rotate(28 80 25)' fill='%23D4A24C'/%3E%3Ccircle cx='50' cy='58' r='37' fill='%23D4A24C'/%3E%3C/svg%3E">
 <style>
   :root {
-    --ink: #1A2332;
-    --ink-soft: rgba(26, 35, 50, 0.68);
-    --line: rgba(26, 35, 50, 0.10);
+    --mark: #1A2332;
+    --accent: #D4A24C;
+    --accent-text: #9A6F1E;
     --bg: #FAFAF8;
-    --tint: #F2F1EC;
-    --gold: #D4A24C;
-    --gold-deep: #8A6420;
-    --gold-wash: rgba(212, 162, 76, 0.16);
+    --muted: rgba(26, 35, 50, 0.66);
+    --line: rgba(26, 35, 50, 0.1);
+    --tint: rgba(26, 35, 50, 0.03);
+    --gold-soft: rgba(212, 162, 76, 0.15);
   }
-
   * { box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    margin: 0;
-    font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a { color: inherit; }
-
+  body { margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--mark); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-  .logo { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 22px; letter-spacing: 1px; text-decoration: none; }
-  .logo svg { width: 34px; height: 34px; flex: none; }
-
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    min-height: 48px; padding: 12px 28px; border-radius: 8px;
-    font-weight: 700; font-size: 16px; text-decoration: none;
-    border: 2px solid var(--ink); transition: transform .12s ease, background .12s ease;
-  }
-  .btn:hover { transform: translateY(-1px); }
-  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-  .btn-primary { background: var(--ink); color: var(--bg); }
-  .btn-outline { background: transparent; color: var(--ink); }
-  .btn-gold { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-
-  /* NAV */
-  header { border-bottom: 1px solid var(--line); }
-  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; }
-  .nav-links { display: flex; align-items: center; gap: 32px; font-weight: 500; font-size: 15px; }
-  .nav-links a:not(.btn) { text-decoration: none; }
-  .nav-links a:not(.btn):hover { text-decoration: underline; text-underline-offset: 4px; }
-
-  /* HERO */
-  .hero { text-align: center; padding: 96px 0 88px; }
-  .hero .mark { width: 72px; height: 72px; margin: 0 auto 28px; display: block; }
-  .eyebrow {
-    display: inline-block; padding: 6px 16px; border-radius: 20px;
-    background: var(--gold-wash); color: var(--gold-deep);
-    font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px;
-  }
-  h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.12; margin: 0 auto 24px; max-width: 820px; letter-spacing: -0.5px; }
-  .lede { font-size: clamp(17px, 2.2vw, 20px); color: var(--ink-soft); margin: 0 auto 40px; max-width: 680px; }
-  .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
   section { padding: 88px 0; }
-  h2 { font-size: clamp(28px, 4vw, 34px); line-height: 1.2; text-align: center; margin: 0 0 12px; }
-  .sub { font-size: 17px; text-align: center; color: var(--ink-soft); margin: 0 auto 52px; max-width: 640px; }
+  .tint { background: var(--tint); }
+  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.12; margin: 0 0 24px; }
+  h2 { font-size: clamp(26px, 3.6vw, 34px); line-height: 1.2; margin: 0 0 12px; }
+  .lead { font-size: clamp(17px, 2vw, 19px); color: var(--muted); margin: 0 0 40px; }
+  .center { text-align: center; }
+  .sub { color: var(--muted); margin: 0 auto 52px; max-width: 640px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-text); margin-bottom: 16px; }
+  .pill { display: inline-block; padding: 6px 16px; border-radius: 20px; background: var(--gold-soft); color: var(--accent-text); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
+  .btn { display: inline-block; padding: 15px 30px; border-radius: 8px; font-weight: 700; font-size: 16px; }
+  .btn-primary { background: var(--mark); color: var(--bg); }
+  .btn-outline { border: 2px solid var(--mark); }
+  .btn-gold { background: var(--accent); color: var(--mark); width: 100%; text-align: center; }
+  .btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
-  .grid { display: grid; gap: 20px; }
-  .grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 0 auto; }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
-  .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 44px 40px; }
+  /* nav */
+  .nav { border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 22px; padding-bottom: 22px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+  .links { display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500; flex-wrap: wrap; }
+  .links a:not(.btn):hover { color: var(--accent-text); }
+  .links .btn { padding: 12px 22px; }
 
-  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+  /* hero */
+  .hero { text-align: center; padding: 96px 0 88px; }
+  .hero .wrap { max-width: 900px; }
+  .hero .logo { margin: 0 auto 28px; }
+
+  /* cards and grids */
+  .grid { display: grid; gap: 22px; }
+  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 40px; }
+  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .g5 { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 26px; }
   .card h3, .feature h3 { font-size: 17px; margin: 0 0 8px; }
-  .card p, .feature p { font-size: 15px; color: var(--ink-soft); margin: 0; }
+  .card p, .feature p { font-size: 15px; color: var(--muted); margin: 0; }
+  .narrow { max-width: 920px; margin: 0 auto; }
+  .icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gold-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .group-label { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-text); margin: 0 0 20px; }
+  .spaced { margin-top: 72px; }
+  .chip { text-align: center; font-weight: 700; font-size: 15px; padding: 20px 14px; }
 
-  .tinted { background: var(--tint); }
+  /* counter */
+  .counter { background: rgba(212, 162, 76, 0.09); }
+  .counter .wrap { display: grid; grid-template-columns: 1fr 1.25fr; gap: 60px; align-items: start; }
+  .counter h2 { font-size: clamp(28px, 4vw, 36px); margin-bottom: 18px; }
+  .counter p { color: var(--muted); }
+  .counter .small { font-size: 14px; }
+  .span-all { grid-column: 1 / -1; }
 
-  .icon {
-    width: 44px; height: 44px; border-radius: 10px; background: var(--gold-wash);
-    display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
-  }
-  .icon svg { width: 22px; height: 22px; stroke: var(--gold-deep); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  /* pricing */
+  .pricing { background: var(--mark); color: var(--bg); text-align: center; }
+  .pricing .sub { color: rgba(250, 250, 248, 0.68); }
+  .price-card { max-width: 410px; margin: 0 auto; background: rgba(250, 250, 248, 0.06); border: 1px solid rgba(250, 250, 248, 0.16); border-radius: 16px; padding: 44px 36px; }
+  .price { font-size: 56px; font-weight: 700; }
+  .price span { font-size: 18px; font-weight: 500; color: rgba(250, 250, 248, 0.65); }
+  .per { font-size: 14px; color: rgba(250, 250, 248, 0.62); margin-bottom: 30px; }
+  .ticks { list-style: none; padding: 0; margin: 0 0 28px; text-align: left; }
+  .ticks li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; margin-bottom: 12px; }
+  .ticks svg { flex: none; margin-top: 3px; }
 
-  /* PRICING BAND */
-  .band { background: var(--ink); color: var(--bg); text-align: center; }
-  .band .sub { color: rgba(250, 250, 248, 0.72); }
-  .ticks { list-style: none; padding: 0; margin: 0 auto 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; max-width: 820px; }
-  .ticks li { display: flex; align-items: center; gap: 10px; font-size: 16px; }
-  .ticks svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; flex: none; }
-
-  /* CONTACT */
-  .contact { text-align: center; }
-  .contact .email { font-size: clamp(18px, 3vw, 22px); }
-  .contact small { display: block; margin-top: 20px; color: var(--ink-soft); font-size: 14px; }
-
-  footer { border-top: 1px solid var(--line); }
-  .foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 28px; padding-bottom: 28px; font-size: 14px; color: var(--ink-soft); }
-  .foot .logo { font-size: 14px; letter-spacing: 0; font-weight: 500; gap: 10px; }
-  .foot .logo svg { width: 18px; height: 18px; }
+  footer { border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding-top: 28px; padding-bottom: 28px; flex-wrap: wrap; }
+  footer .brand { font-size: 13px; font-weight: 400; letter-spacing: 0; gap: 10px; }
 
   @media (max-width: 960px) {
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .g4, .g5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .counter .wrap { grid-template-columns: 1fr; gap: 36px; }
   }
-
   @media (max-width: 640px) {
-    .nav-links a:not(.btn) { display: none; }
-    .nav-links .btn { min-height: 44px; padding: 10px 18px; font-size: 15px; }
-    .hero { padding: 64px 0 64px; }
     section { padding: 64px 0; }
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    .grid-3 { gap: 36px; }
-    .actions .btn { width: 100%; }
-    .ticks { flex-direction: column; align-items: flex-start; max-width: 320px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .btn { transition: none; }
-    .btn:hover { transform: none; }
+    .hero { padding: 64px 0; }
+    .g2, .g3, .g4 { grid-template-columns: 1fr; }
+    .g3 { gap: 34px; }
+    .links { gap: 18px; font-size: 14px; }
+    .links .hide-sm { display: none; }
+    .btns .btn { width: 100%; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="/" aria-label="OSCR home">
-      <svg viewBox="0 0 100 96" aria-hidden="true"><g fill="#D4A24C"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)"/><circle cx="50" cy="58" r="37"/></g></svg>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="OSCR home">
+      <svg width="34" height="34" viewBox="0 0 100 96" aria-hidden="true"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)" fill="#D4A24C"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)" fill="#D4A24C"/><circle cx="50" cy="58" r="37" fill="#D4A24C"/></svg>
       OSCR
     </a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#features">Features</a>
+    <nav class="links" aria-label="Main">
+      <a href="#features" class="hide-sm">Features</a>
+      <a href="#counter" class="hide-sm">The counter</a>
+      <a href="#switching" class="hide-sm">Switching</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact" class="btn btn-primary">Get in touch</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="top">
 
-  <div class="wrap hero">
-    <svg class="mark" viewBox="0 0 100 96" aria-hidden="true"><g fill="#D4A24C"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)"/><circle cx="50" cy="58" r="37"/></g></svg>
-    <div class="eyebrow">Made in New Zealand for small businesses</div>
-    <h1>Run your jobs without fighting your software</h1>
-    <p class="lede">Jobs, customers, photos and (if you need them) parts and stock, all in one place. OSCR shapes itself to your kind of business, so you only see what you actually use.</p>
-    <div class="actions">
+<section class="hero">
+  <div class="wrap">
+    <svg class="logo" width="72" height="72" viewBox="0 0 100 96" aria-hidden="true"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)" fill="#D4A24C"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)" fill="#D4A24C"/><circle cx="50" cy="58" r="37" fill="#D4A24C"/></svg>
+    <div class="pill">Built alongside a working New Zealand bike shop</div>
+    <h1>The workshop, the counter and the stock room. One system.</h1>
+    <p class="lead">Jobs, customers, the till, gift cards, accounts, stock and supplier orders in one place. OSCR shapes itself to your kind of business, so you only see what you actually use.</p>
+    <div class="btns">
       <a href="#contact" class="btn btn-primary">Get in touch</a>
       <a href="#features" class="btn btn-outline">See what it does</a>
     </div>
   </div>
+</section>
 
-  <section class="tinted" aria-labelledby="problems">
-    <div class="wrap">
-      <h2 id="problems">Sound familiar?</h2>
-      <p class="sub">The same complaints come up again and again with job management software.</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Stock screens you never use</h3>
-          <p>Most software assumes every business sells parts. If you don't, it's clutter you have to work around.</p>
-        </div>
-        <div class="card">
-          <h3>Per-user pricing punishes growth</h3>
-          <p>Want an apprentice logged in too? That's another seat and another bill.</p>
-        </div>
-        <div class="card">
-          <h3>One workflow, whether it fits or not</h3>
-          <p>Every business works differently. Most software insists you work its way instead.</p>
-        </div>
-        <div class="card">
-          <h3>Customers chasing you for updates</h3>
-          <p>"How's it going?" calls eat into your day, when a couple of photos would answer them.</p>
-        </div>
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center">Sound familiar?</h2>
+    <p class="sub center">The same complaints come up again and again with shop software</p>
+    <div class="grid g2 narrow">
+      <div class="card"><h3>One app for jobs, another for the till</h3><p>The workshop lives in one system, sales in another, and gift cards in a drawer. Nothing talks to anything else.</p></div>
+      <div class="card"><h3>Per-user pricing punishes growth</h3><p>Want an apprentice logged in too? That's another seat, another bill.</p></div>
+      <div class="card"><h3>Typing supplier invoices in by hand</h3><p>A delivery turns up and someone spends the afternoon keying in codes, quantities and costs.</p></div>
+      <div class="card"><h3>Customers chasing you for updates</h3><p>"How's it going?" calls eat your day, when a couple of photos would answer it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center">Shaped to your business</h2>
+    <p class="sub center">Pick what kind of business you run when you set up. OSCR changes its words, stages and screens to match, and you can switch any feature on or off later.</p>
+    <div class="grid g4">
+      <div class="card"><h3>Workshop &amp; repair</h3><p>Bike shops, mechanics, electronics repair. Jobs, parts on order, the till and a scan station for the bench.</p></div>
+      <div class="card"><h3>Service &amp; studio</h3><p>Designers, media, consultants. Clients and projects with deadlines, standard packages in one tap. No stock screens in the way.</p></div>
+      <div class="card"><h3>Field &amp; outdoor</h3><p>Farms, landscaping, trades. Each client's sites on file, and photos from the job go straight onto the job card.</p></div>
+      <div class="card"><h3>Stock &amp; orders</h3><p>Small retail and makers. The till, inventory, reordering and supplier deliveries up front.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top: 40px;">
+  <div class="wrap">
+    <h2 class="center">What OSCR actually does</h2>
+    <p class="sub center">No bloat. Just the parts of the day that actually take up your time.</p>
+    <p class="group-label">In the workshop</p>
+    <div class="grid g3">
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="2"/><rect x="3" y="10" width="12" height="4" rx="2"/><rect x="3" y="16" width="7" height="4" rx="2"/></svg></div>
+        <h3>Jobs your way</h3><p>Name your own workflow stages and custom fields. Click a job's status to change it, and anything due today or overdue stands out on the dashboard.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3>One-tap job shortcuts</h3><p>Set up your common jobs once, like a basic service. One tap adds the work, the labour at your rate and the parts, taken off the shelf.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg></div>
+        <h3>Customers check themselves in</h3><p>A QR code on the counter. Customers scan it, fill in their details and what they've brought in on their own phone, and it lands in OSCR ready for you to confirm.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+        <h3>Photo progress updates</h3><p>Snap photos as the work goes, even away from the shop, and send the customer a private progress page by text. It shows your name, not ours, and disappears after 30 days.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div>
+        <h3>Texts on your terms</h3><p>Quotes, final prices and "ready for pickup" texts go out when you press the button, in your own wording. Nothing is sent without you choosing to.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></div>
+        <h3>Customers remembered</h3><p>Every customer has their full history, what they own and how they ride. Start typing a name or number and it fills in.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section aria-labelledby="shaped">
-    <div class="wrap">
-      <h2 id="shaped">Shaped to your business</h2>
-      <p class="sub">Pick the kind of business you run when you set up. OSCR changes its words, stages and screens to match, and you can switch any feature on or off later.</p>
-      <div class="grid grid-4">
-        <div class="card">
-          <h3>Workshop &amp; repair</h3>
-          <p>Mechanics, bike shops, electronics repair. Jobs, serial numbers, parts on order and a scan station for the bench.</p>
-        </div>
-        <div class="card">
-          <h3>Service &amp; studio</h3>
-          <p>Designers, media, consultants. Clients and projects with deadlines, and no stock screens getting in the way.</p>
-        </div>
-        <div class="card">
-          <h3>Field &amp; outdoor</h3>
-          <p>Farms, landscaping, trades. Photos from the site go straight onto the job and into customer updates.</p>
-        </div>
-        <div class="card">
-          <h3>Stock &amp; orders</h3>
-          <p>Small retail and makers. Orders, inventory and low-stock alerts up front.</p>
-        </div>
+<section id="counter" class="counter">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">At the counter</div>
+      <h2>The till is part of the same system</h2>
+      <p>Sell off the shelf, ring up a finished job, or both on one sale. Stock comes off as it sells, the customer's history is right there, and the day adds up at close.</p>
+      <p class="small">OSCR records card payments taken on your existing EFTPOS terminal. Your terminal stays exactly as it is.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>Sales, refunds and lay-bys</h3><p>Scan a barcode or search stock. Split payments across cash, EFTPOS, bank transfer, gift card or account.</p></div>
+      <div class="card"><h3>Receipts and end of day</h3><p>GST receipts on a standard 80mm receipt printer, and a cash-up that shows what should be in the drawer.</p></div>
+      <div class="card"><h3>Gift cards</h3><p>Sell, top up and redeem, at the till or on a job. Printable cards with a barcode, and expiry set to at least 3 years, as NZ law requires.</p></div>
+      <div class="card"><h3>Accounts and store credit</h3><p>Let regulars put jobs on account with a limit you set, and give store credit that's spent like money.</p></div>
+      <div class="card span-all"><h3>Pay by bank transfer</h3><p>Your account number and a job reference can go on the final price text and lay-by receipts, so customers pay from their banking app. You mark it paid when it lands.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="group-label">Stock and suppliers</p>
+    <div class="grid g3">
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M9 11h7M9 15h7M9 19h4"/></svg></div>
+        <h3>Supplier invoices, read for you</h3><p>Drop in a supplier's PDF invoice and OSCR reads the codes, quantities and costs into stock. A new layout? Show it the columns once and it remembers.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/></svg></div>
+        <h3>Reordering without the guesswork</h3><p>Low stock grouped by supplier, purchase orders in a click, and deliveries checked off against what you ordered.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 7h13v10H1zM14 10h4l3 3v4h-7"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+        <h3>Parts for a job, tracked</h3><p>Order parts against a job and OSCR follows the parcel, so you know the moment they've been delivered.</p>
       </div>
     </div>
-  </section>
 
-  <section id="features" class="tinted" aria-labelledby="features-title">
-    <div class="wrap">
-      <h2 id="features-title">What OSCR actually does</h2>
-      <p class="sub">No bloat. Just the parts of the job that take up your time.</p>
-      <div class="grid grid-3">
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="2"/><rect x="3" y="10" width="12" height="4" rx="2"/><rect x="3" y="16" width="7" height="4" rx="2"/></svg></div>
-          <h3>Jobs your way</h3>
-          <p>Name your own workflow stages and add your own fields. Change a job's status in one click, and overdue work is highlighted so nothing slips.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
-          <h3>Photo progress updates</h3>
-          <p>Snap photos as the work goes and text the customer a private progress page. It shows your business name, not ours, and disappears after 30 days.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div>
-          <h3>Texts on your terms</h3>
-          <p>Quotes, final prices and "ready to collect" texts, in your own wording. Nothing goes to a customer until you press the button.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 8v8M10 8v8M13 8v8M16.5 8v8"/></svg></div>
-          <h3>Scan it, find it</h3>
-          <p>Scan a serial number or barcode with a phone or a USB scanner to fill it in, or to pull up every job that item has had.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-          <h3>Works away from the bench</h3>
-          <p>Scan a job's QR label with your phone to update it or add photos. No signal? Photos wait on the phone and upload once you're back in range.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/></svg></div>
-          <h3>Parts &amp; stock, only if you need them</h3>
-          <p>Parts on order are tracked and marked arrived when they're delivered, with low-stock alerts for the shelf. Don't sell physical things? Switch it off.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></div>
-          <h3>Customers remembered</h3>
-          <p>Every job links to a customer with their full history. Start typing a name and returning customers fill in automatically.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg></div>
-          <h3>Bring your old records</h3>
-          <p>Import customers, past jobs and stock from a spreadsheet or your current system's export, and undo it in one click if it's not right.</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M9 11h7M9 15h7M9 19h4"/></svg></div>
-          <h3>Xero invoicing</h3>
-          <p>Mark a job paid and a draft invoice appears in Xero, ready for you to check and send.</p>
-        </div>
-
+    <p class="group-label spaced">Customers and behind the scenes</p>
+    <div class="grid g3">
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h3>Events and group texts</h3><p>Group customers, say everyone with an e-bike, and text them about a sale or an event. Only people who've agreed to texts, with a stop link in every message.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M9 13l2 2 4-4"/></svg></div>
+        <h3>Xero invoicing</h3><p>Each paid job and till sale becomes a draft invoice in Xero, parts and labour itemised, ready for you to check.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg></div>
+        <h3>Backups and updates, handled</h3><p>A full backup every night, copied to a USB drive or cloud folder if you like. New versions install with one click, and step back on their own if anything's wrong.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></div>
+        <h3>Find anything fast</h3><p>Every search box suggests matches as you type, whether it's customers, stock, gift cards, past sales or settings.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c1-3.5 3.5-5 7-5s6 1.5 7 5M16 14c3 0 5 1.5 6 4"/></svg></div>
+        <h3>One price, your whole team</h3><p>No per-user fees. Everyone gets their own login, and owner-only settings stay locked behind the owner's password.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A6F1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Runs on your own PC</h3><p>Your data stays in the shop. Phones and other computers on the shop Wi-Fi open it in a browser.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="pricing" class="band" aria-labelledby="pricing-title">
-    <div class="wrap">
-      <h2 id="pricing-title">One price for your whole business</h2>
-      <p class="sub">A flat monthly price per business. No per-seat charges and no surprise add-ons. Get in touch and we'll talk through what suits you.</p>
+<section id="switching" class="tint">
+  <div class="wrap">
+    <h2 class="center">Moving from another system?</h2>
+    <p class="sub center">Export a spreadsheet from what you use now and bring it straight in. OSCR matches the columns for you and shows what it found before anything is saved, and any import can be undone.</p>
+    <div class="grid g5">
+      <div class="card chip">Customers</div>
+      <div class="card chip">Job history</div>
+      <div class="card chip">Stock, costs and prices</div>
+      <div class="card chip">Gift card balances</div>
+      <div class="card chip">Store credit</div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <h2>Simple, flat pricing</h2>
+    <p class="sub">No per-seat charges. No surprise add-ons.</p>
+    <div class="price-card">
+      <div class="price">$35<span>/month</span></div>
+      <div class="per">per business, unlimited staff</div>
       <ul class="ticks">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Unlimited staff accounts</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Every feature included</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Help moving your records across</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Updates as they ship</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Unlimited staff accounts</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Every feature included</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Jobs, the till, gift cards and accounts</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Stock, supplier invoices and ordering</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Xero, texts, QR check-in and parcel tracking</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A24C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>One-click updates as they ship</li>
       </ul>
-      <a href="#contact" class="btn btn-gold">Ask about pricing</a>
+      <a href="#contact" class="btn btn-gold">Get in touch</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact" aria-labelledby="contact-title">
-    <div class="wrap">
-      <h2 id="contact-title">Want to see it running in your business?</h2>
-      <p class="sub">Get in touch and we'll show you OSCR with your own kind of jobs, no obligation.</p>
-      <a class="btn btn-primary email" href="mailto:adrien@oscr.nz?subject=OSCR%20enquiry">adrien@oscr.nz</a>
-      <small>We usually reply within one working day.</small>
-    </div>
-  </section>
+<section id="contact" class="center">
+  <div class="wrap">
+    <h2>Want to see it running in your business?</h2>
+    <p class="sub" style="margin-bottom: 32px;">Get in touch and we'll show you OSCR with your own kind of jobs, no obligation. We'll help bring your customers and stock across too.</p>
+    <a href="mailto:[YOUR EMAIL]" class="btn btn-primary">[YOUR EMAIL]</a>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <span class="logo">
-      <svg viewBox="0 0 100 96" aria-hidden="true"><g fill="#D4A24C"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)"/><circle cx="50" cy="58" r="37"/></g></svg>
-      OSCR - Operations, Stock &amp; Customer Register
-    </span>
-    <span>&copy; <span id="year">2026</span> OSCR Limited &middot; NZBN 9429053989222 &middot; New Zealand</span>
+  <div class="wrap">
+    <div class="brand"><svg width="18" height="18" viewBox="0 0 100 96" aria-hidden="true"><ellipse cx="20" cy="25" rx="15" ry="22" transform="rotate(-28 20 25)" fill="#D4A24C"/><ellipse cx="80" cy="25" rx="15" ry="22" transform="rotate(28 80 25)" fill="#D4A24C"/><circle cx="50" cy="58" r="37" fill="#D4A24C"/></svg><span>OSCR - Operations, Stock &amp; Customer Register</span></div>
+    <div>&copy; 2026 OSCR Limited</div>
   </div>
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
