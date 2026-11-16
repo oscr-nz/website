@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<clipPath id="L"><polygon points="0,0 836,0 764,800 0,800"/></clipPath>
+<clipPath id="R"><polygon points="836,0 1600,0 1600,800 764,800"/></clipPath>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1A2332" flood-opacity=".18"/></filter>
+<filter id="sh2" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#D4A24C" flood-opacity=".35"/></filter>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#35527c"/><stop offset="1" stop-color="#eeb07c"/></linearGradient>
+</defs>
+
+<!-- ================= LEFT: three programs ================= -->
+<g clip-path="url(#L)">
+<rect width="840" height="800" fill="#ECE7E3"/>
+<circle cx="400" cy="330" r="330" fill="#E2DBD6"/>
+<!-- juggling arcs -->
+<g fill="none" stroke="#9C928C" stroke-width="4" stroke-dasharray="3 13" stroke-linecap="round"><path d="M250 150 Q320 60 380 78"/><path d="M470 78 Q560 62 610 150"/><path d="M215 330 Q300 420 320 400"/><path d="M600 335 Q520 420 490 400"/></g>
+
+<!-- window A: spreadsheet -->
+<g transform="translate(178,238) rotate(-13)" filter="url(#sh)"><rect x="-125" y="-88" width="250" height="176" rx="10" fill="#fff"/><path d="M-125 -78 a10 10 0 0 1 10 -10 h230 a10 10 0 0 1 10 10 v18 h-250z" fill="#4E8A5E"/><text x="-112" y="-67" font-size="13" font-weight="700" fill="#fff">Spreadsheet</text>
+<g stroke="#CFD6CF" stroke-width="1.5"><path d="M-125 -34H125M-125 -8H125M-125 18H125M-125 44H125M-125 70H125M-70 -60V88M-5 -60V88M60 -60V88"/></g>
+<g fill="#9AA79C"><rect x="-116" y="-27" width="36" height="8" rx="2"/><rect x="-60" y="-27" width="44" height="8" rx="2"/><rect x="6" y="-27" width="30" height="8" rx="2"/><rect x="70" y="-27" width="40" height="8" rx="2"/><rect x="-116" y="-1" width="30" height="8" rx="2"/><rect x="-60" y="-1" width="36" height="8" rx="2"/><rect x="70" y="-1" width="34" height="8" rx="2"/><rect x="-116" y="25" width="38" height="8" rx="2"/><rect x="6" y="25" width="40" height="8" rx="2"/><rect x="-60" y="51" width="40" height="8" rx="2"/><rect x="70" y="51" width="28" height="8" rx="2"/></g>
+<rect x="6" y="-3" width="46" height="12" rx="2" fill="#C0564B"/><text x="11" y="7" font-size="10" font-weight="700" fill="#fff">#REF!</text></g>
+
+<!-- window B: invoicing -->
+<g transform="translate(410,138) rotate(5)" filter="url(#sh)"><rect x="-125" y="-88" width="250" height="176" rx="10" fill="#fff"/><path d="M-125 -78 a10 10 0 0 1 10 -10 h230 a10 10 0 0 1 10 10 v18 h-250z" fill="#4A6FA5"/><text x="-112" y="-67" font-size="13" font-weight="700" fill="#fff">Invoices</text>
+<rect x="-104" y="-44" width="70" height="12" rx="3" fill="#4A6FA5"/><g fill="#C9CED6"><rect x="-104" y="-20" width="150" height="7" rx="2"/><rect x="-104" y="-4" width="120" height="7" rx="2"/><rect x="-104" y="12" width="140" height="7" rx="2"/><rect x="60" y="-20" width="44" height="7" rx="2"/><rect x="60" y="-4" width="44" height="7" rx="2"/><rect x="60" y="12" width="44" height="7" rx="2"/></g>
+<rect x="26" y="36" width="80" height="30" rx="5" fill="#E9EDF3"/><rect x="36" y="47" width="60" height="8" rx="2" fill="#4A6FA5"/>
+<circle cx="112" cy="-84" r="15" fill="#C0564B"/><text x="112" y="-78" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text></g>
+
+<!-- window C: photos / files -->
+<g transform="translate(628,244) rotate(12)" filter="url(#sh)"><rect x="-125" y="-88" width="250" height="176" rx="10" fill="#fff"/><path d="M-125 -78 a10 10 0 0 1 10 -10 h230 a10 10 0 0 1 10 10 v18 h-250z" fill="#7A7480"/><text x="-112" y="-67" font-size="13" font-weight="700" fill="#fff">Photos and forms</text>
+<g><rect x="-108" y="-46" width="64" height="50" rx="4" fill="#B9C7B4"/><rect x="-36" y="-46" width="64" height="50" rx="4" fill="#C9BDAF"/><rect x="36" y="-46" width="64" height="50" rx="4" fill="#B4BDC9"/><rect x="-108" y="14" width="64" height="50" rx="4" fill="#C9BDAF"/><rect x="-36" y="14" width="64" height="50" rx="4" fill="#fff" stroke="#B9B2BD" stroke-width="2"/><g fill="#C9C4CC"><rect x="-28" y="24" width="48" height="5" rx="2"/><rect x="-28" y="35" width="40" height="5" rx="2"/><rect x="-28" y="46" width="44" height="5" rx="2"/></g><rect x="36" y="14" width="64" height="50" rx="4" fill="#B9C7B4"/>
+<path d="M-102 -4 l18 -22 14 14 10 -8 16 16z" fill="#8FA08A"/><path d="M42 56 l16 -20 12 12 10 -8 14 16z" fill="#8FA08A"/></g></g>
+
+<!-- alarm marks and loose paper -->
+<g fill="#C0564B" font-weight="700"><text x="96" y="92" font-size="54">?</text><text x="696" y="92" font-size="54">!</text><text x="562" y="62" font-size="30" opacity=".7">?</text></g>
+<g transform="translate(92,470) rotate(-18)"><rect width="74" height="94" rx="4" fill="#fff" filter="url(#sh)"/><g fill="#CFC9C4"><rect x="10" y="14" width="54" height="6" rx="2"/><rect x="10" y="28" width="44" height="6" rx="2"/><rect x="10" y="42" width="50" height="6" rx="2"/><rect x="10" y="56" width="30" height="6" rx="2"/></g></g>
+<g transform="translate(672,452) rotate(15)"><rect width="74" height="94" rx="4" fill="#fff" filter="url(#sh)"/><g fill="#CFC9C4"><rect x="10" y="14" width="54" height="6" rx="2"/><rect x="10" y="28" width="44" height="6" rx="2"/><rect x="10" y="42" width="50" height="6" rx="2"/></g></g>
+<rect x="556" y="400" width="46" height="46" fill="#F2D675" transform="rotate(9 579 423)"/><rect x="196" y="404" width="46" height="46" fill="#F2B8A0" transform="rotate(-10 219 427)"/>
+
+<!-- person, frazzled -->
+<g>
+<path d="M300 800 V610 Q300 540 370 530 H430 Q500 540 500 610 V800Z" fill="#8E6F70"/>
+<path d="M378 532 Q400 556 422 532 V500 H378Z" fill="#D7A383"/>
+<!-- arms up, hands on head -->
+<path d="M318 600 Q250 520 322 418" fill="none" stroke="#8E6F70" stroke-width="44" stroke-linecap="round"/>
+<path d="M482 600 Q550 520 478 418" fill="none" stroke="#8E6F70" stroke-width="44" stroke-linecap="round"/>
+<circle cx="400" cy="446" r="62" fill="#D7A383"/>
+<!-- messy hair -->
+<path d="M338 430 Q326 366 372 372 Q366 344 398 362 Q414 336 432 366 Q470 356 462 396 Q482 404 464 436 Q452 400 420 404 Q380 396 352 408 Q342 416 338 430Z" fill="#2B2F3A"/>
+<g stroke="#2B2F3A" stroke-width="5" stroke-linecap="round" fill="none"><path d="M352 372 l-14 -18M398 356 l-2 -24M446 364 l14 -20M468 396 l20 -8"/></g>
+<circle cx="326" cy="414" r="24" fill="#D7A383"/><circle cx="474" cy="414" r="24" fill="#D7A383"/>
+<!-- face -->
+<g stroke="#2B2F3A" stroke-width="5" stroke-linecap="round" fill="none"><path d="M366 430 l22 8M434 430 l-22 8"/><path d="M376 484 q8 -10 16 0 q8 10 16 0 q8 -10 16 0"/></g>
+<circle cx="378" cy="452" r="6" fill="#2B2F3A"/><circle cx="422" cy="452" r="6" fill="#2B2F3A"/>
+<g fill="#7FB2D9"><path d="M300 372 q-10 16 0 22 q10 -6 0 -22z"/><path d="M506 366 q-10 16 0 22 q10 -6 0 -22z"/><path d="M274 440 q-8 13 0 18 q8 -5 0 -18z"/></g>
+</g>
+<!-- desk -->
+<rect x="0" y="690" width="840" height="110" fill="#CFC6C0"/><rect x="0" y="690" width="840" height="10" fill="#B8ADA6"/>
+<g transform="translate(120,640)"><rect width="88" height="54" rx="6" fill="#fff"/><rect x="8" y="-10" width="72" height="16" rx="3" fill="#fff" stroke="#CFC9C4" stroke-width="2"/><g fill="#CFC9C4"><rect x="10" y="12" width="66" height="5"/><rect x="10" y="24" width="50" height="5"/><rect x="10" y="36" width="60" height="5"/></g></g>
+<g transform="translate(610,628)"><rect x="0" y="6" width="58" height="60" rx="9" fill="#2B2F3A"/><rect x="6" y="14" width="46" height="30" rx="3" fill="#C0564B"/><g stroke="#C0564B" stroke-width="4" stroke-linecap="round" fill="none"><path d="M-12 4 q-8 14 0 28M70 4 q8 14 0 28"/></g></g>
+</g>
+
+<!-- ================= RIGHT: one screen ================= -->
+<g clip-path="url(#R)">
+<rect x="760" width="840" height="800" fill="#FAF4E4"/>
+<circle cx="1200" cy="330" r="330" fill="#F5E9CB"/>
+
+<!-- one calm window -->
+<g transform="translate(1200,214)" filter="url(#sh2)"><rect x="-250" y="-170" width="500" height="340" rx="14" fill="#fff"/>
+<path d="M-250 -156 a14 14 0 0 1 14 -14 h46 v340 h-46 a14 14 0 0 1 -14 -14z" fill="#1A2332"/><circle cx="-220" cy="-140" r="11" fill="#D4A24C"/><g fill="#3B4A63"><rect x="-232" y="-108" width="24" height="6" rx="3"/><rect x="-232" y="-84" width="24" height="6" rx="3"/><rect x="-232" y="-60" width="24" height="6" rx="3"/><rect x="-232" y="-36" width="24" height="6" rx="3"/></g>
+<text x="-172" y="-132" font-size="19" font-weight="700" fill="#1A2332">Job #12 · Pricing</text>
+<g><rect x="-172" y="-116" width="84" height="40" rx="6" fill="#F4F1EA"/><rect x="-80" y="-116" width="84" height="40" rx="6" fill="#F4F1EA"/><rect x="12" y="-116" width="62" height="40" rx="6" fill="#F6E6C2"/><g fill="#1A2332"><rect x="-162" y="-96" width="50" height="9" rx="2"/><rect x="-70" y="-96" width="50" height="9" rx="2"/><rect x="20" y="-96" width="44" height="9" rx="2"/></g><g fill="#B5AE9F"><rect x="-162" y="-108" width="30" height="5" rx="2"/><rect x="-70" y="-108" width="30" height="5" rx="2"/><rect x="20" y="-108" width="30" height="5" rx="2"/></g></g>
+<rect x="-172" y="-64" width="246" height="22" fill="#F6E6C2"/><g stroke="#E6E1D6" stroke-width="1.5"><path d="M-172 -18H74M-172 6H74M-172 30H74M-172 54H74M-172 78H74M-100 -42V102M-20 -42V102M30 -42V102"/></g><rect x="-172" y="-64" width="246" height="166" fill="none" stroke="#E6E1D6" stroke-width="1.5"/>
+<g fill="#A9B0BA"><rect x="-164" y="-34" width="52" height="7" rx="2"/><rect x="-92" y="-34" width="60" height="7" rx="2"/><rect x="-12" y="-34" width="30" height="7" rx="2"/><rect x="38" y="-34" width="28" height="7" rx="2"/><rect x="-164" y="-10" width="44" height="7" rx="2"/><rect x="-92" y="-10" width="52" height="7" rx="2"/><rect x="-12" y="-10" width="30" height="7" rx="2"/><rect x="38" y="-10" width="28" height="7" rx="2"/><rect x="-164" y="14" width="50" height="7" rx="2"/><rect x="-92" y="14" width="64" height="7" rx="2"/><rect x="-12" y="14" width="30" height="7" rx="2"/><rect x="38" y="14" width="28" height="7" rx="2"/><rect x="-164" y="38" width="40" height="7" rx="2"/><rect x="-92" y="38" width="48" height="7" rx="2"/><rect x="-12" y="38" width="30" height="7" rx="2"/><rect x="38" y="38" width="28" height="7" rx="2"/></g>
+<rect x="-172" y="116" width="106" height="32" rx="7" fill="#D4A24C"/><text x="-119" y="137" text-anchor="middle" font-size="13" font-weight="700" fill="#1A2332">Send quote</text>
+<rect x="-56" y="116" width="92" height="32" rx="7" fill="#F4F1EA"/><text x="-10" y="137" text-anchor="middle" font-size="13" font-weight="700" fill="#1A2332">Invoice</text>
+<!-- photos beside the sheet -->
+<rect x="90" y="-170" width="160" height="340" fill="#1A2332"/><path d="M236 -170 a14 14 0 0 1 14 14 v312 a14 14 0 0 1 -14 14 h-146 v-340z" fill="#1A2332"/>
+<rect x="100" y="-116" width="140" height="150" rx="4" fill="url(#sky)"/><rect x="100" y="-6" width="140" height="40" fill="#3f6b3a"/><rect x="166" y="-86" width="5" height="96" fill="#C9CED6"/><rect x="150" y="-96" width="38" height="12" rx="2" fill="#FFF7D6"/>
+<text x="102" y="-134" font-size="13" font-weight="700" fill="#fff">Photos</text>
+<rect x="100" y="48" width="42" height="34" rx="4" fill="#B9C7B4" stroke="#D4A24C" stroke-width="2.5"/><rect x="149" y="48" width="42" height="34" rx="4" fill="#C9BDAF"/><rect x="198" y="48" width="42" height="34" rx="4" fill="#B4BDC9"/>
+<rect x="100" y="98" width="140" height="50" rx="5" fill="#243149"/><path d="M114 123 l8 8 14 -16" fill="none" stroke="#7BC08F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="146" y="128" font-size="12" font-weight="700" fill="#fff">Certificate</text>
+</g>
+<!-- tick badge -->
+<circle cx="1462" cy="52" r="30" fill="#5BA672"/><path d="M1448 52 l10 10 18 -20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#D4A24C"><path d="M920 110 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z"/><path d="M1500 300 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" opacity=".7"/></g>
+
+<!-- person, relaxed: sitting back with a coffee -->
+<g transform="translate(0,26)">
+<path d="M1082 800 V628 Q1082 552 1166 542 H1234 Q1318 552 1318 628 V800Z" fill="#1A2332"/>
+<path d="M1178 544 Q1200 568 1222 544 V512 H1178Z" fill="#D7A383"/>
+<circle cx="1200" cy="462" r="62" fill="#D7A383"/>
+<path d="M1138 452 Q1132 392 1200 392 Q1268 392 1262 452 Q1244 418 1200 420 Q1156 418 1138 452Z" fill="#2B2F3A"/>
+<g stroke="#2B2F3A" stroke-width="5" stroke-linecap="round" fill="none"><path d="M1168 468 q10 -11 20 0M1212 468 q10 -11 20 0"/><path d="M1174 490 q26 24 52 0"/></g>
+<circle cx="1160" cy="486" r="9" fill="#E9A48C" opacity=".6"/><circle cx="1240" cy="486" r="9" fill="#E9A48C" opacity=".6"/>
+<path d="M1300 600 Q1336 668 1296 680 Q1262 668 1262 612" fill="none" stroke="#2A3A56" stroke-width="40" stroke-linecap="round"/>
+<g transform="translate(1236,548)"><rect width="52" height="56" rx="8" fill="#fff"/><path d="M0 22 h-8 a12 12 0 0 0 0 24 h8" fill="none" stroke="#fff" stroke-width="8"/><rect y="20" width="52" height="10" fill="#D4A24C"/><g fill="none" stroke="#C9B88E" stroke-width="4" stroke-linecap="round"><path d="M16 -10 q-7 -10 0 -20 q7 -10 0 -20"/><path d="M36 -10 q-7 -10 0 -20 q7 -10 0 -20"/></g></g>
+<circle cx="1264" cy="606" r="21" fill="#D7A383"/>
+</g>
+<!-- desk -->
+<rect x="760" y="690" width="840" height="110" fill="#E9D9B4"/><rect x="760" y="690" width="840" height="10" fill="#D4A24C"/>
+<g transform="translate(1410,640)"><rect width="150" height="16" rx="3" fill="#fff"/><rect x="10" y="-14" width="130" height="14" rx="3" fill="#F4F1EA"/><rect x="-6" y="16" width="162" height="34" rx="4" fill="#1A2332"/><circle cx="75" cy="33" r="6" fill="#D4A24C"/></g>
+<!-- plant -->
+<g transform="translate(960,620)"><path d="M32 20 Q20 -30 -8 -42 Q16 -40 34 6 Q32 -50 50 -74 Q52 -30 44 10 Q60 -30 88 -34 Q64 -14 52 22Z" fill="#5BA672"/><path d="M12 18 h56 l-8 54 h-40z" fill="#C97B4A"/></g>
+</g>
+
+<!-- divider -->
+<polygon points="830,0 842,0 770,800 758,800" fill="#fff"/>
+<circle cx="800" cy="400" r="46" fill="#1A2332" stroke="#fff" stroke-width="8"/><path d="M780 400 h36 M802 384 l16 16 -16 16" fill="none" stroke="#D4A24C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
